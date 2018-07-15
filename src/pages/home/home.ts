@@ -14,6 +14,7 @@ export class HomePage {
   weather: Observable<any>;
   city: any;
   country : any;
+  
 
   constructor(public navCtrl: NavController, public httpClient: HttpClient) {
 
