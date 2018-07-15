@@ -1,5 +1,5 @@
 page-home {
-    ion-card {
+    .card {
         border-top: 2px solid colorofyourchoice!important ;
         border-color: black!important;
         border-radius : 20px!important ;
@@ -11,5 +11,11 @@ page-home {
       .login-background {
         background: url("../assets/imgs/backgr.png") no-repeat fixed center;
         background-size: cover;
+      }
+
+      .transparent {
+          border-color: rgba(0, 0, 0, 0);
+	        background-color: rgba(0, 0, 0, 0);
+	        color: white; 
       }
 }
