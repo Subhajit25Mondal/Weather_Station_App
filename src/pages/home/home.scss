@@ -1,8 +1,7 @@
 page-home {
-    .card {
+    ion-card {
         border-top: 2px solid colorofyourchoice!important ;
-        border-color: black!important;
-        border-radius : 20px!important ;
+        border-radius : 15px!important ;
      }
      .masters {
         background-color: #488aff;
@@ -13,9 +12,5 @@ page-home {
         background-size: cover;
       }
 
-      .transparent {
-          border-color: rgba(0, 0, 0, 0);
-	        background-color: rgba(0, 0, 0, 0);
-	        color: white; 
-      }
+    
 }
