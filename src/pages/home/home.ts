@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { AsyncPipe } from '@angular/common';
+import { dateDataSortValue } from 'ionic-angular/umd/util/datetime-util';
+import { AbstractClassPart } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +16,12 @@ export class HomePage {
   weather: Observable<any>;
   city: any;
   country : any;
+  temperature : Number;
   
+  cDate;
+  cDay;
+  cYear;
+  cMonth;
 
   constructor(public navCtrl: NavController, public httpClient: HttpClient) {
 
@@ -23,7 +30,25 @@ export class HomePage {
     .subscribe(data => {
       this.city=data.name;
       this.country=data.sys.country;
-    })
+      this.temperature=(data.main.temp)-273.15;
+    });
+
+
+    this.processTime();
+  }
+
+
+  processTime(){
+    var dateObj = new Date();
+    var Day=dateObj.getDay().toString();
+    this.cDate=dateObj.getDate().toString();
+    var Month=dateObj.getMonth();
+    this.cYear=dateObj.getFullYear().toString();
+
+    var months =['Jan','Feb','Mar','Apr','Mar','June','July','Aug','Sep','Oct','Nov','Dec'];
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    this.cMonth = months[Month];
+    this.cDay=days[Day];
 
   }
 
