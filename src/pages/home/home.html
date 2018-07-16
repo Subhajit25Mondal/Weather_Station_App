@@ -26,7 +26,13 @@
    <p class="date">{{cDay}}, {{cDate}} {{cMonth}}, {{cYear}}</p>
   </ion-item>
 
-  <ion-grid padding>
+  <ion-item no-lines class="transparent">
+    <p class="temperature">{{temperature | number:'2.0-0'}}°C</p>
+    <p class="description">{{desc}}</p>
+    <img src item-end src="assets/icon/{{icon}}.png" height="70px" width="70px">
+  </ion-item>
+
+  <!--<ion-grid padding>
     <ion-row>
       <ion-col>
         <p class="temperature">{{temperature | number:'2.0-0'}}°C</p>
@@ -35,6 +41,6 @@
 
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid>-->
 
 </ion-content>

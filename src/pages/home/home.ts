@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-import { AsyncPipe } from '@angular/common';
-import { dateDataSortValue } from 'ionic-angular/umd/util/datetime-util';
-import { AbstractClassPart } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'page-home',
@@ -17,6 +14,8 @@ export class HomePage {
   city: any;
   country : any;
   temperature : Number;
+  icon: any;
+  desc: any;
   
   cDate;
   cDay;
@@ -31,6 +30,8 @@ export class HomePage {
       this.city=data.name;
       this.country=data.sys.country;
       this.temperature=(data.main.temp)-273.15;
+      this.icon=data.weather[0].icon;
+      this.desc=data.weather[0].description;
     });
 
 
