@@ -31,15 +31,15 @@ export class HomePage {
     this.weather = this.httpClient.get(this.url);
     this.weather
     .subscribe(data => {
-      this.city=data.name;
-      this.country=data.sys.country;
+      this.city= data.name;
+      this.country= data.sys.country;
       this.temperature=(data.main.temp)-273.15;
-      this.icon=data.weather[0].icon;
-      this.desc=data.weather[0].description;
-      this.humidity=data.main.humidity;
-      this.pressure=data.main.pressure;
-      this.windSpeed=data.wind.speed;
-      this.windDir=data.wind.deg;
+      this.icon= data.weather[0].icon;
+      this.desc= data.weather[0].description;
+      this.humidity= data.main.humidity;
+      this.pressure= data.main.pressure;
+      this.windSpeed= data.wind.speed;
+      this.windDir= data.wind.deg;
     });
 
 
