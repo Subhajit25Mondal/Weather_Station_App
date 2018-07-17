@@ -43,8 +43,19 @@ page-home {
 
       .listhead {
         font-family: Roboto;
-        font-size: 20px;
+        font-size: 17px;
         background: #D8F7F2;
         color: #0E0D4F;
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .today {
+        color: #0E0D4F;
+        font-family: Roboto;
+        font-size: 19px;
       }
 }

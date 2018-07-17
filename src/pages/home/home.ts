@@ -16,6 +16,10 @@ export class HomePage {
   temperature : Number;
   icon: any;
   desc: any;
+  humidity:any;
+  pressure:any;
+  windSpeed: any;
+  windDir: any;
   
   cDate;
   cDay;
@@ -32,6 +36,10 @@ export class HomePage {
       this.temperature=(data.main.temp)-273.15;
       this.icon=data.weather[0].icon;
       this.desc=data.weather[0].description;
+      this.humidity=data.main.humidity;
+      this.pressure=data.main.pressure;
+      this.windSpeed=data.wind.speed;
+      this.windDir=data.wind.deg;
     });
 
 

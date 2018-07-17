@@ -17,10 +17,6 @@
 
 <ion-content padding class="login-background">
 
-  <!--<ion-card class="transparent">
-<ion-card-header>Yo Yo</ion-card-header>
-  </ion-card>-->
-
   <ion-item no-lines class="transparent">
    <p class="city">{{(city)}}, {{country}}</p>
    <p class="date">{{cDay}}, {{cDate}} {{cMonth}}, {{cYear}}</p>
@@ -35,6 +31,30 @@
  <ion-card>
    <ion-list>
      <ion-list-header class="listhead">RIGHT NOW</ion-list-header>
+     <ion-item>
+      <img src="assets/icon/humidity.png" item-start class="icon">
+      <p class="today">Humidity</p>
+      <p item-end class="today">{{humidity}}%</p>
+     </ion-item>
+
+     <ion-item>
+      <img src="assets/icon/pressure.png" item-start class="icon">
+      <p class="today">Pressure</p>
+      <p item-end class="today">{{pressure}} hPa</p>
+     </ion-item>
+
+     <ion-item>
+      <img src="assets/icon/wind.png" item-start class="icon">
+      <p class="today">Wind</p>
+      <p item-end class="today">{{windSpeed}} m/sec</p>
+     </ion-item>
+
+     <ion-item>
+      <img src="assets/icon/windDir.png" item-start class="icon">
+      <p class="today">Wind Direction</p>
+      <p item-end class="today">{{windDir}} m/sec</p>
+     </ion-item>
+
    </ion-list>
  </ion-card>
 
