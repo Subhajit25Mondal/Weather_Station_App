@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import { OtherDaysPage } from '../other-days/other-days';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +10,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomePage {
 
-  url = 'http://api.openweathermap.org/data/2.5/weather?lat=23.5204&lon=87.3119&APPID=63a61c83d2406647c0ed9b36cad89d1f';
+  lat: any = 23.5204;
+  lon: any = 87.3119;
+
+  url = 'http://api.openweathermap.org/data/2.5/weather?lat='+this.lat+'&lon='+this.lon+'&APPID=63a61c83d2406647c0ed9b36cad89d1f';
   weather: Observable<any>;
   city: any;
   country : any;
@@ -55,10 +59,17 @@ export class HomePage {
     this.cYear=dateObj.getFullYear().toString();
 
     var months =['Jan','Feb','Mar','Apr','Mar','June','July','Aug','Sep','Oct','Nov','Dec'];
-    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     this.cMonth = months[Month];
     this.cDay=days[Day];
 
+  }
+
+  otherDays(lat, lon) {
+    this.navCtrl.push(OtherDaysPage,{
+      'lat':lat,
+      'lon':lon
+    });
   }
 
 }
