@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="custom1">
+  <ion-navbar color="custom1" no-border>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -31,16 +31,11 @@
     <p class="description">{{desc}}</p>
     <img src item-end src="assets/icon/{{icon}}.png" height="70px" width="70px">
   </ion-item>
-
-  <!--<ion-grid padding>
-    <ion-row>
-      <ion-col>
-        <p class="temperature">{{temperature | number:'2.0-0'}}°C</p>
-      </ion-col>
-      <ion-col>
-
-      </ion-col>
-    </ion-row>
-  </ion-grid>-->
+<br><br><br>
+ <ion-card>
+   <ion-list>
+     <ion-list-header class="listhead">RIGHT NOW</ion-list-header>
+   </ion-list>
+ </ion-card>
 
 </ion-content>
