@@ -68,7 +68,9 @@ export class HomePage {
   otherDays(lat, lon) {
     this.navCtrl.push(OtherDaysPage,{
       'lat':lat,
-      'lon':lon
+      'lon':lon,
+      'city':this.city,
+      'country':this.country
     });
   }
 

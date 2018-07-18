@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the OtherDaysPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HttpClient } from '@angular/common/http';
 
 @IonicPage()
 @Component({
@@ -15,7 +9,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class OtherDaysPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  city = this.navParams.get('city');
+  country = this.navParams.get('country');
+  lat = this.navParams.get('lat');
+  lon = this.navParams.get('lon');
+
+
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
   }
 
  
