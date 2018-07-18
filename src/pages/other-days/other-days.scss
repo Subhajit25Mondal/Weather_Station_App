@@ -5,6 +5,17 @@ page-other-days {
 
       ion-card {
         border-top: 2px solid colorofyourchoice!important ;
-        border-radius : 10px!important ;
+        border-radius : 13px!important ;
+     }
+
+     .date {
+       font-family: Roboto;
+       font-size: 15px;
+     }
+
+     .day {
+      font-family: Roboto;
+      font-size: 17px;
+      color: black;
      }
 }

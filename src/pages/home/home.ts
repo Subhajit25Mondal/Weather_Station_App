@@ -14,6 +14,8 @@ export class HomePage {
   lat: any = 23.5204;
   lon: any = 87.3119;
 
+  Day;
+
   url = 'http://api.openweathermap.org/data/2.5/weather?lat='+this.lat+'&lon='+this.lon+'&APPID=63a61c83d2406647c0ed9b36cad89d1f';
   weather: Observable<any>;
   city: any;
@@ -56,7 +58,7 @@ export class HomePage {
 
   processTime(){
     var dateObj = new Date();
-    var Day=dateObj.getDay().toString();
+    this.Day=dateObj.getDay();
     this.cDate=dateObj.getDate().toString();
     var Month=dateObj.getMonth();
     this.cYear=dateObj.getFullYear().toString();
@@ -64,7 +66,7 @@ export class HomePage {
     var months =['Jan','Feb','Mar','Apr','Mar','June','July','Aug','Sep','Oct','Nov','Dec'];
     var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     this.cMonth = months[Month];
-    this.cDay=days[Day];
+    this.cDay=days[this.Day];
 
   }
 
@@ -80,7 +82,8 @@ export class HomePage {
     this.navCtrl.push(OtherDaysPage,{
       'id':this.id,
       'city':this.city,
-      'country':this.country
+      'country':this.country,
+      'day': this.Day 
     });
   }
 
