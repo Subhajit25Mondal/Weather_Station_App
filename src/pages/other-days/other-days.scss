@@ -18,4 +18,30 @@ page-other-days {
       font-size: 17px;
       color: black;
      }
+
+     .image {
+       width : 40px;
+       height: 40px;
+       margin-left: auto;
+    margin-right: auto;
+     }
+
+     .day{
+      font-family: Roboto;
+      font-size: 30px;
+      color: black;
+     }
+
+     .night {
+      font-family: Roboto;
+      font-size: 30px;
+      color: black;
+      text-align: right;
+     }
+
+     .desc {
+      font-family: Roboto;
+      font-size: 17px;
+      color: black;
+     }
 }

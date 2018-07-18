@@ -12,30 +12,68 @@
 <ion-card>
   <p padding-top padding-left padding-right class="day">{{dayshow1}}</p>
   <p padding-left class="date">{{day1 | slice:0:11}}</p>
+  <ion-item>
+    <p item-start class="date">Day</p><p item-end class="date">Night</p>
+  </ion-item>
+  <ion-grid padding-right padding-left>
+    <ion-row>
+      <ion-col width-25>
+        <p class="day">25°C</p>
+      </ion-col>
+
+      <ion-col width-25>
+          <img src="assets/icon/01d.png" class="image">
+        </ion-col>
+        <ion-col width-25>
+            <img src="assets/icon/01d.png" class="image">
+          </ion-col>
+
+          <ion-col width-25>
+              <p class="night">25°C</p>
+            </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  <ion-item padding-right padding-left padding-bottom>
+    <p class="desc" item-start>Cloudy</p>
+    <p class="desc" item-end style="text-align: right">Cloudy</p>
+  </ion-item>
 </ion-card>
 
 
 <ion-card>
     <p padding-top padding-left padding-right class="day">{{dayshow2}}</p>
     <p padding-left class="date">{{day2 | slice:0:11}}</p>
+    <ion-item>
+        <p item-start class="date">Day</p><p item-end class="date">Night</p>
+      </ion-item>
   </ion-card>
 
 
   <ion-card>
       <p padding-top padding-left padding-right class="day">{{dayshow3}}</p>
       <p padding-left class="date">{{day3 | slice:0:11}}</p>
+      <ion-item>
+          <p item-start class="date">Day</p><p item-end class="date">Night</p>
+        </ion-item>
     </ion-card>
 
 
     <ion-card>
         <p padding-top padding-left padding-right class="day">{{dayshow4}}</p>
         <p padding-left class="date">{{day4 | slice:0:11}}</p>
+        <ion-item>
+            <p item-start class="date">Day</p><p item-end class="date">Night</p>
+          </ion-item>
       </ion-card>
 
 
       <ion-card>
           <p padding-top padding-left padding-right class="day">{{dayshow5}}</p>
           <p padding-left class="date">{{day5 | slice:0:11}}</p>
+          <ion-item>
+              <p item-start class="date">Day</p><p item-end class="date">Night</p>
+            </ion-item>
         </ion-card>
 
 

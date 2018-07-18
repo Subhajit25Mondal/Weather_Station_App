@@ -21,7 +21,7 @@ export class OtherDaysPage {
   dayshow2 = this.days[this.daycode +1];
   dayshow3 = this.days[this.daycode+2];
   dayshow4 = this.days[this.daycode+3];
-  dayshow5 = this.days[this.daycode+5];
+  dayshow5 = this.days[this.daycode+4];
 
   day1; day2; day3; day4; day5;
   temp1d; temp1n; temp2d; temp2n; temp3d; temp3n; temp4d; temp4n; temp5d; temp5n;
