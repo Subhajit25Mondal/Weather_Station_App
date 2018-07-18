@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { OtherDaysPage } from '../other-days/other-days';
+import { LoadingController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -24,13 +25,14 @@ export class HomePage {
   pressure:any;
   windSpeed: any;
   windDir: any;
+  id: any;
   
   cDate;
   cDay;
   cYear;
   cMonth;
 
-  constructor(public navCtrl: NavController, public httpClient: HttpClient) {
+  constructor(public navCtrl: NavController, public httpClient: HttpClient, public loadingCtrl: LoadingController) {
 
     this.weather = this.httpClient.get(this.url);
     this.weather
@@ -44,6 +46,7 @@ export class HomePage {
       this.pressure= data.main.pressure;
       this.windSpeed= data.wind.speed;
       this.windDir= data.wind.deg;
+      this.id= data.id;
     });
 
 
@@ -65,10 +68,17 @@ export class HomePage {
 
   }
 
-  otherDays(lat, lon) {
+  otherDays() {
+
+    const loader = this.loadingCtrl.create({
+      content: "Loading...",
+      duration: 900
+    });
+    loader.present();
+  
+
     this.navCtrl.push(OtherDaysPage,{
-      'lat':lat,
-      'lon':lon,
+      'id':this.id,
       'city':this.city,
       'country':this.country
     });
