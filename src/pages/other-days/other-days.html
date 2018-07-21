@@ -7,7 +7,7 @@
 </ion-header>
 
 
-<ion-content padding class="masters">
+<ion-content padding class="masters">       <!--Card1-->
 
 <ion-card>
   <p padding-top padding-left padding-right class="day">{{dayshow1}}</p>
@@ -18,37 +18,37 @@
   <ion-grid padding-right padding-left>
     <ion-row>
       <ion-col width-25>
-        <p class="day">25°C</p>
+        <p class="day">{{temp1d | number:'2.0-0'}}°C</p>
       </ion-col>
 
       <ion-col width-25>
-          <img src="assets/icon/01d.png" class="image">
+          <img src="assets/icon/{{icon1d}}.png" class="image">
         </ion-col>
         <ion-col width-25>
-            <img src="assets/icon/01d.png" class="image">
+            <img src="assets/icon/{{icon1n}}.png" class="image">
           </ion-col>
 
           <ion-col width-25>
-              <p class="night">25°C</p>
+              <p class="night">{{temp1n | number:'2.0-0'}}°C</p>
             </ion-col>
       
     </ion-row>
   </ion-grid>
   <ion-item padding-right padding-left padding-bottom>
-    <p class="desc" item-start>Cloudy</p>
-    <p class="desc" item-end style="text-align: right">Cloudy</p>
+    <p class="desc" item-start>{{desc1d}}</p>
+    <p class="desc" item-end style="text-align: right">{{desc1n}}</p>
   </ion-item>
 </ion-card>
 
-
-<ion-card>
+                                              <!--card2-->
+<ion-card>  
     <p padding-top padding-left padding-right class="day">{{dayshow2}}</p>
     <p padding-left class="date">{{day2 | slice:0:11}}</p>
     <ion-item>
         <p item-start class="date">Day</p><p item-end class="date">Night</p>
       </ion-item>
   </ion-card>
-
+                                                <!--card3-->
 
   <ion-card>
       <p padding-top padding-left padding-right class="day">{{dayshow3}}</p>
@@ -58,7 +58,7 @@
         </ion-item>
     </ion-card>
 
-
+                                                <!--card4-->
     <ion-card>
         <p padding-top padding-left padding-right class="day">{{dayshow4}}</p>
         <p padding-left class="date">{{day4 | slice:0:11}}</p>
@@ -67,7 +67,7 @@
           </ion-item>
       </ion-card>
 
-
+                                                  <!--card5-->
       <ion-card>
           <p padding-top padding-left padding-right class="day">{{dayshow5}}</p>
           <p padding-left class="date">{{day5 | slice:0:11}}</p>

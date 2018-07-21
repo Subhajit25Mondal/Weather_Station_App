@@ -47,6 +47,44 @@ export class OtherDaysPage {
       this.day4=data.list[24].dt_txt;
       this.day5=data.list[32].dt_txt;
 
+      this.temp1d= data.list[0].main.temp - 273.15;
+      this.temp1n= data.list[3].main.temp - 273.15;
+      this.temp2d= data.list[8].main.temp - 273.15;
+      this.temp2n= data.list[11].main.temp - 273.15;
+      this.temp3d= data.list[16].main.temp - 273.15;
+      this.temp3n= data.list[19].main.temp - 273.15;
+      this.temp4d= data.list[24].main.temp - 273.15;
+      this.temp4n= data.list[27].main.temp - 273.15;
+      this.temp5d= data.list[32].main.temp - 273.15;
+      this.temp5n= data.list[35].main.temp - 273.15;
+
+
+      this.icon1d = data.list[0].weather[0].icon;
+      this.icon1n = data.list[3].weather[0].icon;
+      this.icon2d = data.list[8].weather[0].icon;
+      this.icon2n = data.list[11].weather[0].icon;
+      this.icon3d = data.list[16].weather[0].icon;
+      this.icon3n = data.list[19].weather[0].icon;
+      this.icon4d = data.list[24].weather[0].icon;
+      this.icon4n = data.list[27].weather[0].icon;
+      this.icon5d = data.list[32].weather[0].icon;
+      this.icon5n = data.list[35].weather[0].icon;
+
+
+
+      this.desc1d = data.list[0].weather[0].description;
+      this.desc1n = data.list[3].weather[0].description;
+      this.desc2d = data.list[8].weather[0].description;
+      this.desc2n = data.list[11].weather[0].description;
+      this.desc3d = data.list[16].weather[0].description;
+      this.desc3n = data.list[19].weather[0].description;
+      this.desc4d = data.list[24].weather[0].description;
+      this.desc4n = data.list[27].weather[0].description;
+      this.desc5d = data.list[32].weather[0].description;
+      this.desc5n = data.list[35].weather[0].description;
+
+
+
     });
 
   }
